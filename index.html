@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI Controls Demo</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+<h1>UI Controls with Examples</h1>
+
+<section>
+    <h2>1. Radiobutton</h2>
+    <p>Використовується для вибору <b>одного варіанту</b> із декількох.</p>
+    <div class="example">
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other
+    </div>
+</section>
+
+<section>
+    <h2>2. Checkbox</h2>
+    <p>Дозволяє обрати <b>кілька варіантів одночасно</b>.</p>
+    <div class="example">
+        <input type="checkbox"> Pizza
+        <input type="checkbox"> Burger
+        <input type="checkbox"> Salad
+    </div>
+</section>
+
+<section>
+    <h2>3. Text input</h2>
+    <p>Поле для введення тексту.</p>
+    <div class="example">
+        <input type="text" placeholder="Enter your name">
+        <input type="email" placeholder="Enter your email">
+        <input type="password" placeholder="Enter password">
+    </div>
+</section>
+
+<section>
+    <h2>4. Tabs</h2>
+    <p>Дозволяють переключатися між різними секціями контенту.</p>
+    <div class="example">
+        <button onclick="showTab('tab1')">Tab 1</button>
+        <button onclick="showTab('tab2')">Tab 2</button>
+        <button onclick="showTab('tab3')">Tab 3</button>
+        <div id="tab1">Content of Tab 1</div>
+        <div id="tab2" style="display:none">Content of Tab 2</div>
+        <div id="tab3" style="display:none">Content of Tab 3</div>
+    </div>
+</section>
+
+<section>
+    <h2>5. Button</h2>
+    <p>Виконує дію після кліку.</p>
+    <div class="example">
+        <button onclick="alert('Hello!')">Click me</button>
+        <button>Submit</button>
+        <button disabled>Disabled</button>
+    </div>
+</section>
+
+<section>
+    <h2>6. Text label</h2>
+    <p>Просто текст для пояснень або підпису елементів.</p>
+    <div class="example">
+        <label for="username">Username:</label>
+        <input id="username" type="text"><br>
+        <label for="age">Age:</label>
+        <input id="age" type="number">
+    </div>
+</section>
+
+<section>
+    <h2>7. Link</h2>
+    <p>Посилання на іншу сторінку.</p>
+    <div class="example">
+        <a href="https://google.com" target="_blank">Google</a><br>
+        <a href="https://github.com" target="_blank">GitHub</a><br>
+        <a href="#">Local page</a>
+    </div>
+</section>
+
+<section>
+    <h2>8. Tooltip</h2>
+    <p>Невелике пояснення, яке з’являється при наведенні.</p>
+    <div class="example">
+        <button title="This is a tooltip">Hover me</button>
+        <span title="User info">👤</span>
+        <input type="text" placeholder="Focus me" title="Enter your data here">
+    </div>
+</section>
+
+<section>
+    <h2>9. Dropdown list</h2>
+    <p>Список, з якого можна вибрати значення.</p>
+    <div class="example">
+        <select>
+            <option>Ukraine</option>
+            <option>Poland</option>
+            <option>Germany</option>
+        </select>
+    </div>
+</section>
+
+<section>
+    <h2>10. Data grid</h2>
+    <p>Таблиця з даними.</p>
+    <div class="example">
+        <table border="1" cellpadding="5">
+            <tr><th>ID</th><th>Name</th><th>Age</th></tr>
+            <tr><td>1</td><td>Ivan</td><td>19</td></tr>
+            <tr><td>2</td><td>Maksim></td><td>20</td></tr>
+            <tr><td>3</td><td>Roman</td><td>20</td></tr>
+        </table>
+    </div>
+</section>
+
+<script>
+    function showTab(tabId) {
+        document.querySelectorAll('[id^="tab"]').forEach(el => el.style.display = "none");
+        document.getElementById(tabId).style.display = "block";
+    }
+</script>
+
+</body>
+</html>
